@@ -11,24 +11,26 @@ app.set('view engine', 'ejs');
 
 // Index
 app.get('/', (req, res) => {
-    res.render("index");
+    res.render("index", {pageTitle: 'Example App'});
 });
 
 // Color Indexes
 app.get(/^\/(red|blue|green)$/, (req, res) => {
     const color = req.params[0];
-    res.render('color', { color });
+    res.render('color', { color, pageTitle: `${color} Pages`});
 });
 
 // Color Pages with Sizes
+
 app.get(/^\/(red|blue|green)\/(20|30|40)$/, (req, res) => {
     const match = req.url.match(/^\/(red|blue|green)\/(20|30|40)$/);
 
     const color = match[1];
     const size = match[2];
 
-    res.render('color-size', { color, size });
+    res.render('color-size', { color, size, pageTitle: 'Example App'});
 });
+
 
 // Start the server
 app.listen(port, () => {
