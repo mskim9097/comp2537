@@ -1,0 +1,66 @@
+body {
+    padding:7em;
+}
+h4 {
+    margin-top:.5em;
+}
+div {
+    width: 300px;
+    height: 100px;
+    background-color: white;
+    border: 1px solid black;
+    padding: .8em;
+    transition: all 2s;  /*translate*/  /*all */
+    transition-timing-function: linear; /*linear(0 0%, 0 2.27%, 0.02 4.53%, 0.04 6.8%, 0.06 9.07%, 0.1 11.33%, 0.14 13.6%, 0.25 18.15%, 0.39 22.7%, 0.56 27.25%, 0.77 31.8%, 1 36.35%, 0.89 40.9%, 0.85 43.18%, 0.81 45.45%, 0.79 47.72%, 0.77 50%, 0.75 52.27%, 0.75 54.55%, 0.75 56.82%, 0.77 59.1%, 0.79 61.38%, 0.81 63.65%, 0.85 65.93%, 0.89 68.2%, 1 72.7%, 0.97 74.98%, 0.95 77.25%, 0.94 79.53%, 0.94 81.8%, 0.94 84.08%, 0.95 86.35%, 0.97 88.63%, 1 90.9%, 0.99 93.18%, 0.98 95.45%, 0.99 97.73%, 1 100%); */ /* linear */ /*ease-in-out*/ /*cubic-bezier(0.68, 0.11, 0.84, 1.84)*/;   
+     
+}
+/* https://www.w3schools.com/css/css3_2dtransforms.asp */
+
+div:hover {
+    /* width: 600px;
+    height: 300px; */
+    background-color: darkred;
+    color: white;
+
+    /*transition: all 2s;*/   /* different transition for hover */
+
+    /* transform: translate(-50px,100px); */
+    /* transform: translateY(50px); */
+    /* transform: rotate(45deg); */
+    /* transform: rotateZ(180deg); */
+    /* transform: skewY(-10deg); */
+    /* transform: skew(-10deg, 20deg); */
+    /* transform: scale(-1.5);  */
+    /* transform: scaleY(1.5); */
+
+    /* transition: all 0s; */  /* different transition for hover */
+
+
+     animation-name: dance;
+    animation-duration: 4s;
+    
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;  /*step-start*/ /*step-end*/ /*ease-in*/ /*ease-out*/ /*ease-in-out*/
+    animation-delay: 3s;
+}
+
+@keyframes dance {
+    0% {
+        background-color: blue;
+        color: white;
+    }
+    25% {
+        background-color: red;
+    }
+    50% {
+        background-color: yellow;
+        color: black;
+    }
+    75% {
+        background-color: darkgreen;
+    }
+    100% {
+        background-color: blue;
+        color: white;
+    }
+}
